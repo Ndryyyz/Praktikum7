@@ -1,0 +1,13 @@
+classDiagram
+    class Mahasiswa {
+        -list daftar_mahasiswa
+        +__init__()
+        +tambah() void
+        +tampilkan() void
+        +hapus(nama: string) void
+        +ubah(nama: string) void
+    }
+    
+    note for Mahasiswa "Class untuk mengelola data nilai mahasiswa
+    - Menyimpan daftar mahasiswa dalam list
+    - Setiap mahasiswa berisi nama dan nilai"
