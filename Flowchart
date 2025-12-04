@@ -1,0 +1,57 @@
+flowchart TD
+    Start([Mulai Program]) --> Init[Inisialisasi Objek Mahasiswa]
+    Init --> Menu[Tampilkan Menu Utama]
+    
+    Menu --> Input{Pilih Menu 1-5}
+    
+    Input -->|1| Tambah[Tambah Data Mahasiswa]
+    Tambah --> InputNama[Input Nama]
+    InputNama --> InputNilai[Input Nilai]
+    InputNilai --> ValidasiNilai{Nilai Valid?}
+    ValidasiNilai -->|Ya| SaveData[Simpan ke Daftar]
+    ValidasiNilai -->|Tidak| ErrorNilai[Tampilkan Error]
+    SaveData --> SuccessTambah[Tampilkan Pesan Sukses]
+    ErrorNilai --> Menu
+    SuccessTambah --> Menu
+    
+    Input -->|2| Tampilkan[Tampilkan Semua Data]
+    Tampilkan --> CekData{Data Tersedia?}
+    CekData -->|Ya| ShowTable[Tampilkan Tabel Data]
+    CekData -->|Tidak| ShowEmpty[Tampilkan 'Belum Ada Data']
+    ShowTable --> Menu
+    ShowEmpty --> Menu
+    
+    Input -->|3| Hapus[Hapus Data Mahasiswa]
+    Hapus --> InputNamaHapus[Input Nama yang Dihapus]
+    InputNamaHapus --> CariHapus{Data Ditemukan?}
+    CariHapus -->|Ya| DeleteData[Hapus dari Daftar]
+    CariHapus -->|Tidak| NotFoundHapus[Tampilkan 'Tidak Ditemukan']
+    DeleteData --> SuccessHapus[Tampilkan Pesan Sukses]
+    NotFoundHapus --> Menu
+    SuccessHapus --> Menu
+    
+    Input -->|4| Ubah[Ubah Data Mahasiswa]
+    Ubah --> InputNamaUbah[Input Nama yang Diubah]
+    InputNamaUbah --> CariUbah{Data Ditemukan?}
+    CariUbah -->|Ya| InputNilaiBaru[Input Nilai Baru]
+    CariUbah -->|Tidak| NotFoundUbah[Tampilkan 'Tidak Ditemukan']
+    InputNilaiBaru --> ValidasiNilaiBaru{Nilai Valid?}
+    ValidasiNilaiBaru -->|Ya| UpdateData[Update Nilai]
+    ValidasiNilaiBaru -->|Tidak| ErrorNilaiBaru[Tampilkan Error]
+    UpdateData --> SuccessUbah[Tampilkan Pesan Sukses]
+    NotFoundUbah --> Menu
+    ErrorNilaiBaru --> Menu
+    SuccessUbah --> Menu
+    
+    Input -->|5| Exit[Tampilkan Pesan Selesai]
+    Exit --> End([Selesai])
+    
+    Input -->|Lainnya| Invalid[Tampilkan 'Pilihan Tidak Valid']
+    Invalid --> Menu
+    
+    style Start fill:#90EE90
+    style End fill:#FFB6C6
+    style Menu fill:#87CEEB
+    style SaveData fill:#FFD700
+    style DeleteData fill:#FFD700
+    style UpdateData fill:#FFD700
