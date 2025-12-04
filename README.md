@@ -1,12 +1,12 @@
-'' Sistem Manajemen Nilai Mahasiswa
+Sistem Manajemen Nilai Mahasiswa
 
 Program Python sederhana untuk mengelola data nilai mahasiswa menggunakan konsep Object-Oriented Programming (OOP).
 
-## Deskripsi Program
+Deskripsi Program
 
 Program ini adalah sistem CRUD (Create, Read, Update, Delete) berbasis command-line untuk mengelola data nilai mahasiswa. Data disimpan dalam memori selama program berjalan dan menggunakan struktur class untuk organisasi kode yang lebih baik.
 
-## Fitur Utama
+Fitur Utama
 
 1. **Tambah Data** - Menambahkan data mahasiswa baru (nama dan nilai)
 2. **Tampilkan Data** - Menampilkan semua data mahasiswa dalam bentuk tabel
@@ -14,9 +14,9 @@ Program ini adalah sistem CRUD (Create, Read, Update, Delete) berbasis command-l
 4. **Ubah Data** - Mengubah nilai mahasiswa berdasarkan nama
 5. **Keluar** - Mengakhiri program
 
-## Struktur Program
+Struktur Program
 
-### Class Mahasiswa
+Class Mahasiswa
 
 ```python
 class Mahasiswa:
@@ -28,7 +28,7 @@ class Mahasiswa:
     + ubah(nama)    # Mengubah nilai berdasarkan nama
 ```
 
-## Cara Penggunaan
+Cara Penggunaan
 
 1. Jalankan program:
 ```bash
@@ -38,7 +38,7 @@ python Lab7.py
 2. Pilih menu yang tersedia (1-5)
 3. Ikuti instruksi yang muncul di layar
 
-## Contoh Penggunaan
+Contoh Penggunaan
 
 ```
 ========================================
@@ -58,14 +58,14 @@ Masukkan nilai mahasiswa: 85.5
 Data John Doe berhasil ditambahkan!
 ```
 
-## Fitur Teknis
+Fitur Teknis
 
 - **Error Handling**: Validasi input nilai (harus berupa angka)
 - **Case Insensitive**: Pencarian nama tidak case-sensitive
 - **Format Tabel**: Tampilan data terstruktur dengan alignment
 - **OOP**: Menggunakan class untuk enkapsulasi data dan method
 
-## Flowchart Program
+Flowchart Program
 
 ```mermaid
 flowchart TD
@@ -79,16 +79,16 @@ flowchart TD
     Input -->|5| Exit[Keluar]
 ```
 
-## Persyaratan
+Persyaratan
 
 - Python 3.x
 - Tidak memerlukan library eksternal
 
-## Catatan
+Catatan
 
 - Data hanya tersimpan selama program berjalan (tidak persisten)
 - Untuk penyimpanan permanen, pertimbangkan menggunakan database atau file
 
-## Lisensi
+Lisensi
 
 Program ini dibuat untuk keperluan pembelajaran dan dapat digunakan secara bebas.
